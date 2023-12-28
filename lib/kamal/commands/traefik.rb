@@ -9,7 +9,7 @@ class Kamal::Commands::Traefik < Kamal::Commands::Base
   DEFAULT_LABELS = {
     # These ensure we serve a 502 rather than a 404 if no containers are available
     "traefik.http.routers.catchall.entryPoints" => "http",
-    "traefik.http.routers.catchall.rule" => "PathPrefix(`/`)",
+    "traefik.http.routers.catchall.rule" => "PathPrefix(`/up`)",
     "traefik.http.routers.catchall.service" => "unavailable",
     "traefik.http.routers.catchall.priority" => 1,
     "traefik.http.services.unavailable.loadbalancer.server.port" => "0"

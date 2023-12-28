@@ -192,7 +192,7 @@ class Kamal::Configuration::Role
           # Setting a service property ensures that the generated service name will be consistent between versions
           "traefik.http.services.#{traefik_service}.loadbalancer.server.scheme" => "http",
 
-          "traefik.http.routers.#{traefik_service}.rule" => "PathPrefix(`/`)",
+          "traefik.http.routers.#{traefik_service}.rule" => "PathPrefix(`/up`)",
           "traefik.http.routers.#{traefik_service}.priority" => "2",
           "traefik.http.middlewares.#{traefik_service}-retry.retry.attempts" => "5",
           "traefik.http.middlewares.#{traefik_service}-retry.retry.initialinterval" => "500ms",
